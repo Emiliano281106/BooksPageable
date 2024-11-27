@@ -3,7 +3,9 @@ package io.company.library;
 //https://projectlombok.org/features/all
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.annotation.CreatedDate;
 
+import java.time.Instant;
 
 
 @Getter @Setter @ToString @NoArgsConstructor @AllArgsConstructor
@@ -23,6 +25,9 @@ public class Book {
     private int publishedYear;
     @Column(name="ISBN")
     private String isbn;
+    @CreatedDate
+    private Instant createdDate;
+
 
     public Book(String title, String author, int pages, int publishedYear, String isbn) {
         this.title = title;
