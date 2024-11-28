@@ -8,7 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:5173") // Adjust the origin as needed
+//@CrossOrigin(origins = "http://localhost:5173") // Adjust the origin as needed
+@CrossOrigin(origins = "http://localhost:[*]")
 @RequestMapping("api")
 public class LibraryRestController {
 
